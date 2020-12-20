@@ -9,7 +9,7 @@ import UIKit
 
 // MARK: - HapticFeedbackButton
 
-class HapticFeedbackButton: UIButton {
+public class HapticFeedbackButton: UIButton {
 
     /// Add target to button
     /// - Parameter aDecoder: aDecoder instance
