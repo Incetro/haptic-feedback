@@ -11,8 +11,8 @@ import UIKit
 
 open class HapticFeedbackButton: UIButton {
 
-    /// Impact flag
-    public var isImpact = true
+    /// Haptic flag
+    public var isHapticEnabled = true
 
     /// Add target to button
     /// - Parameters:
@@ -35,14 +35,14 @@ extension HapticFeedbackButton: Hapticable {
 
     /// Did press button
     @objc private func didPress() {
-        if isImpact {
+        if isHapticEnabled {
             hapticFeedback.generate(.heavy)
         }
     }
 
     /// Did release button
     @objc private func didRelease() {
-        if isImpact {
+        if isHapticEnabled {
             hapticFeedback.generate(.light)
         }
     }
