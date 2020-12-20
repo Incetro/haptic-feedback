@@ -1,5 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name          = 'haptic-feedback'
+  spec.module_name   = 'HapticFeedback'
   spec.version       = '1.0.1'
   spec.license       = 'MIT'
   spec.authors       = { 'incetro' => 'incetro@ya.ru', 'Alexander Lezya' => 'Lezya007@gmail.com' }
