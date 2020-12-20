@@ -9,11 +9,11 @@ import UIKit
 
 // MARK: - HapticFeedbackButton
 
-public class HapticFeedbackButton: UIButton {
+open class HapticFeedbackButton: UIButton {
 
     /// Add target to button
     /// - Parameter aDecoder: aDecoder instance
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         addTarget(self, action: #selector(didPress), for: .touchDown)
         addTarget(self, action: #selector(didRelease), for: .touchUpInside)
