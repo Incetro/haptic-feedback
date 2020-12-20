@@ -11,9 +11,13 @@ import UIKit
 
 open class HapticFeedbackButton: UIButton {
 
+    /// Impact flag
+    public var isImpact = true
+
     /// Add target to button
-    /// - Parameter frame: frame instance
-    override public init(frame: CGRect) {
+    /// - Parameters:
+    ///   - frame: frame instance
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         addTarget(self, action: #selector(didPress), for: .touchDown)
         addTarget(self, action: #selector(didRelease), for: .touchUpInside)
@@ -31,11 +35,15 @@ extension HapticFeedbackButton: Hapticable {
 
     /// Did press button
     @objc private func didPress() {
-        hapticFeedback.generate(.heavy)
+        if isImpact {
+            hapticFeedback.generate(.heavy)
+        }
     }
 
     /// Did release button
     @objc private func didRelease() {
-        hapticFeedback.generate(.light)
+        if isImpact {
+            hapticFeedback.generate(.light)
+        }
     }
 }
