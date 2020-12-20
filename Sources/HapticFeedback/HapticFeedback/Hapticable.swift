@@ -7,6 +7,9 @@
 
 import Foundation
 
+/// HapticFeedback instance
+private let haptic = HapticFeedback()
+
 // MARK: - Hapticable
 
 public protocol Hapticable {
@@ -35,7 +38,7 @@ public protocol Hapticable {
 extension Hapticable {
 
     public var hapticFeedback: HapticFeedback {
-        HapticFeedback()
+        haptic
     }
 
     public func error() {
