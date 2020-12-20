@@ -12,12 +12,16 @@ import UIKit
 open class HapticFeedbackButton: UIButton {
 
     /// Add target to button
-    /// - Parameter aDecoder: aDecoder instance
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    /// - Parameter frame: frame instance
+    override public init(frame: CGRect) {
+        super.init(frame: frame)
         addTarget(self, action: #selector(didPress), for: .touchDown)
         addTarget(self, action: #selector(didRelease), for: .touchUpInside)
         addTarget(self, action: #selector(didRelease), for: .touchUpOutside)
+    }
+
+    required public init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 }
 
