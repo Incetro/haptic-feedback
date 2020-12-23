@@ -49,7 +49,7 @@ To use a *HapticFeedback*, all you will need to import 'HapticFeedback' module i
 ```swift
 import HapticFeedback
 ```
-To use an instance of a *HapticFeedback*, you just need to implement the extension with the 'Hapticable' protocol:
+To use an instance of a *HapticFeedback*, you just need to implement the extension with the `Hapticable` protocol:
 
 ```swift
 // MARK: Hapticable
@@ -87,13 +87,13 @@ public enum HapticFeedbackNotification {
 Here is small example how can you generate *Success*, *Warning* and *Error* feedbacks:
 
 ```swift
-/// Generate error feedback
+/// Generate success feedback
 hapticFeedback.generate(.success)
 
-/// Generate success feedback
+/// Generate warning feedback
 hapticFeedback.generate(.warning)
 
-/// Generate warning feedback
+/// Generate error feedback
 hapticFeedback.generate(.error)
 
 ```
@@ -133,9 +133,9 @@ Each character in this string represents some specific haptic impact:
 * "-" - delay which has duration of 0.1 second
 
 ### 4. UI extensions <a name="ui-extensions"></a>
-*HapticFeedback* comes with a couple of UI Extensions: HapticFeedbackButton (which is subclass of UIButton) and UIViewController extension with Hapticable protocol.
+*HapticFeedback* comes with a couple of UI Extensions: `HapticFeedbackButton` (which is subclass of `UIButton`) and `UIViewController` extension with `Hapticable` protocol.
 
-In order to start using HapticFeedbackButton - just set the class name in your project to HapticFeedbackButton. Then with UIControlEvents.touchDown event you will get heavy impact feedback and with UIControlEvents.touchUpInside and UIControlEvents.touchUpOutside you will get light impact feedback.
+In order to start using `HapticFeedbackButton` - just set the class name in your project to `HapticFeedbackButton`. Then with `UIControlEvents.touchDown` event you will get heavy impact feedback and with `UIControlEvents.touchUpInside` and `UIControlEvents.touchUpOutside` you will get light impact feedback.
 
 UIViewController extension:
 
@@ -157,7 +157,7 @@ public func present(
 }
 ```
 
-To use *HapticFeedback* together with UIViewtController extension follow this simple example:
+To use *HapticFeedback* together with `UIViewtController` extension follow this simple example:
 
 ```swift
 /// Show notification alert
