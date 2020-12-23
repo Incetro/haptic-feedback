@@ -60,6 +60,7 @@ public final class HapticFeedback {
     }
 
     /// Prepare device for some notification
+    /// - Parameter notification: some haptic feedback notification
     public func prepare(_ notification: HapticFeedbackNotification) throws {
         try engine?.prepare(notification)
     }

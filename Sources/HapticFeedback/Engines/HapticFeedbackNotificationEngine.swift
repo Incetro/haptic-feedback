@@ -40,7 +40,7 @@ final class HapticFeedbackNotificationEngine {
     // MARK: - Useful
 
     /// Generate some impact action
-    /// - Parameter style: some impact style
+    /// - Parameter impact: some impact style
     func generate(_ impact: HapticFeedbackImpactStyle) {
         guard Device.current.hasHapticFeedback else { return }
         impactGenerator[impact]?.impactOccurred()
