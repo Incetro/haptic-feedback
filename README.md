@@ -62,6 +62,12 @@ extension YourClass: Hapticable {
     }
 }
 ```
+Or you can instantiate 'Haptic Feedback' instance manually:
+
+```swift
+/// 
+let hapticFeedback = HapticFeedback()
+```
 
 Keep in mind that depending on the device you are using - the feedback might be different. Starting from iPhone 7 all the iPhones are coming with haptic engine. Prior to iPhone 7 *HapticFeedback* will use standard vibration. Also Pattern play and impacts are not supported on devices prior to iPhone 7 and iOS 10
 
