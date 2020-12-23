@@ -11,7 +11,7 @@ import UIKit
 
 extension UIViewController: Hapticable {
 
-    // MARK: - Usefull
+    // MARK: - Useful
 
     /// Present view controller with haptic feedback notifications
     /// - Parameters:
