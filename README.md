@@ -44,10 +44,23 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Usage <a name="Usage"></a>
 
-To use a *Haptic Feedback* instance, first of all you will need to import HapticFeedback module into your swift file:
+To use a *Haptic Feedback*, all you will need to import 'HapticFeedback' module into your swift file:
 
 ```swift
 import HapticFeedback
+```
+To use an instance of a *Haptic Feedback*, you just need to implement the extension with the 'Hapticable' protocol:
+
+```swift
+// MARK: Hapticable
+
+extension YourClass: Hapticable {
+
+	/// Now you can use Haptic feedback instance
+	private func someMethod() {
+        hapticFeedback.generate(.heavy)
+    }
+}
 ```
 
 Keep in mind that depending on the device you are using - the feedback might be different. Starting from iPhone 7 all the iPhones are coming with haptic engine. Prior to iPhone 7 *HapticFeedback* will use standard vibration. Also Pattern play and impacts are not supported on devices prior to iPhone 7 and iOS 10
@@ -95,6 +108,7 @@ public enum HapticFeedbackImpactStyle {
 And use their call, similar to the previous example:
 
 ```
+/// Generate medium feedback
 hapticFeedback.generate(.medium)
 ```
 
