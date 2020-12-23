@@ -56,8 +56,8 @@ To use an instance of a *HapticFeedback*, you just need to implement the extensi
 
 extension YourClass: Hapticable {
 
-	/// Now you can use Haptic feedback instance
-	private func someMethod() {
+    /// Now you can use Haptic feedback instance
+    private func someMethod() {
         hapticFeedback.generate(.heavy)
     }
 }
