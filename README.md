@@ -1,6 +1,6 @@
 
 
-# Haptic Feedback
+# HapticFeedback
 
 <div align = "center">
   <a href="https://cocoapods.org/pods/haptic-feedback">
@@ -24,7 +24,7 @@
   <br>
 </div>
 
-*Haptic Feedback* is easy to use iOS haptic feedback generator. Besides default haptic feedbacks it can play patterns! Checkout 'ExampleHapticFeedback' project.
+*HapticFeedback* is easy to use iOS haptic feedback generator. Besides default haptic feedbacks it can play patterns! Checkout 'ExampleHapticFeedback' project.
 
 
 - [Example](https://github.com/Incetro/haptic-feedback/HapticFeedbackExample) 
@@ -44,12 +44,12 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Usage <a name="Usage"></a>
 
-To use a *Haptic Feedback*, all you will need to import 'HapticFeedback' module into your swift file:
+To use a *HapticFeedback*, all you will need to import 'HapticFeedback' module into your swift file:
 
 ```swift
 import HapticFeedback
 ```
-To use an instance of a *Haptic Feedback*, you just need to implement the extension with the 'Hapticable' protocol:
+To use an instance of a *HapticFeedback*, you just need to implement the extension with the 'Hapticable' protocol:
 
 ```swift
 // MARK: Hapticable
@@ -62,17 +62,17 @@ extension YourClass: Hapticable {
     }
 }
 ```
-Or you can instantiate 'Haptic Feedback' instance manually:
+Or you can instantiate 'HapticFeedback' instance manually:
 
 ```swift
-/// 
+/// HapticFeedback instance
 let hapticFeedback = HapticFeedback()
 ```
 
 Keep in mind that depending on the device you are using - the feedback might be different. Starting from iPhone 7 all the iPhones are coming with haptic engine. Prior to iPhone 7 *HapticFeedback* will use standard vibration. Also Pattern play and impacts are not supported on devices prior to iPhone 7 and iOS 10
 
 ### 1. Generating predefined default feedbacks. <a name="predefined-feedbacks"></a>
-With *Haptic Feedback* you can generate three default types of haptic notifications:
+With *HapticFeedback* you can generate three default types of haptic notifications:
 
 ```swift
 // MARK: - HapticFeedbackNotification
@@ -99,7 +99,7 @@ hapticFeedback.generate(.error)
 ```
 
 ### 2. Generating impact feedbacks <a name="impact-feedbacks"></a>
-Besides default haptic notifications, *Haptic Feedback* can also generate impact notifications. The library supports three types of impact notifications **(available in iOS10+ and staring from iPhone 7)**:
+Besides default haptic notifications, *HapticFeedback* can also generate impact notifications. The library supports three types of impact notifications **(available in iOS10+ and staring from iPhone 7)**:
 
 ```swift
 // MARK: - HapticFeedbackImpactStyle
@@ -119,11 +119,11 @@ hapticFeedback.generate(.medium)
 ```
 
 ### 3. Pattern play <a name="pattern-play"></a>
-And now something special - **Pattern Play**. *Haptic Feedback* can play patterns, "coded" as String. Let's take a look at small example:
+And now something special - **Pattern Play**. *HapticFeedback* can play patterns, "coded" as String. Let's take a look at small example:
 
 ```swift 
 /// Generate custom pattern
-hapticFeedback.generate("..oO-Oo..", delay: 0.1)
+hapticFeedback.generate("..oooO-O-Oooo..", delay: 0.1)
 ```
 Each character in this string represents some specific haptic impact:
 
@@ -133,7 +133,7 @@ Each character in this string represents some specific haptic impact:
 * "-" - delay which has duration of 0.1 second
 
 ### 4. UI extensions <a name="ui-extensions"></a>
-*Haptic Feedback* comes with a couple of UI Extensions: HapticFeedbackButton (which is subclass of UIButton) and UIViewController extension with Hapticable protocol.
+*HapticFeedback* comes with a couple of UI Extensions: HapticFeedbackButton (which is subclass of UIButton) and UIViewController extension with Hapticable protocol.
 
 In order to start using HapticFeedbackButton - just set the class name in your project to HapticFeedbackButton. Then with UIControlEvents.touchDown event you will get heavy impact feedback and with UIControlEvents.touchUpInside and UIControlEvents.touchUpOutside you will get light impact feedback.
 
@@ -157,7 +157,7 @@ public func present(
 }
 ```
 
-To use *Haptic Feedback* together with UIViewtController extension follow this simple example:
+To use *HapticFeedback* together with UIViewtController extension follow this simple example:
 
 ```swift
 /// Show notification alert
@@ -206,7 +206,7 @@ $ pod install
 ```
 ### Manually
 
-If you prefer not to use any dependency managers, you can integrate *Haptic feedback* into your project manually.
+If you prefer not to use any dependency managers, you can integrate *Hapticfeedback* into your project manually.
 
 #### Embedded Framework
 
@@ -216,7 +216,7 @@ If you prefer not to use any dependency managers, you can integrate *Haptic feed
   $ git init
   ```
 
-- Add *Haptic Feedback* as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
+- Add *HapticFeedback* as a git [submodule](http://git-scm.com/docs/git-submodule) by running the following command:
 
   ```bash
   $ git submodule add https://github.com/incetro/haptic-feedback.git
@@ -249,4 +249,4 @@ Gasol: 1ezya007@gmail.com, incetro: incetro@ya.ru
 
 ## License <a name="license"></a>
 
-*Haptic Feedback* is available under the MIT license. See the LICENSE file for more info.
+*HapticFeedback* is available under the MIT license. See the LICENSE file for more info.
