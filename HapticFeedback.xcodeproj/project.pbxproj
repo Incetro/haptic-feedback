@@ -23,7 +23,7 @@
 		DEF61F652584D0AD007E6A9E /* HapticFeedbackError.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61F602584D0AD007E6A9E /* HapticFeedbackError.swift */; };
 		DEF61F662584D0AD007E6A9E /* HapticFeedbackEngineProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61F612584D0AD007E6A9E /* HapticFeedbackEngineProtocol.swift */; };
 		DEF61F672584D0AD007E6A9E /* HapticFeedback.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61F622584D0AD007E6A9E /* HapticFeedback.swift */; };
-		DEF61F682584D0AD007E6A9E /* HapticFeedbackImpact.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61F632584D0AD007E6A9E /* HapticFeedbackImpact.swift */; };
+		DEF61F682584D0AD007E6A9E /* HapticFeedbackImpactStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61F632584D0AD007E6A9E /* HapticFeedbackImpactStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,7 +59,7 @@
 		DEF61F602584D0AD007E6A9E /* HapticFeedbackError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticFeedbackError.swift; sourceTree = "<group>"; };
 		DEF61F612584D0AD007E6A9E /* HapticFeedbackEngineProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticFeedbackEngineProtocol.swift; sourceTree = "<group>"; };
 		DEF61F622584D0AD007E6A9E /* HapticFeedback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticFeedback.swift; sourceTree = "<group>"; };
-		DEF61F632584D0AD007E6A9E /* HapticFeedbackImpact.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticFeedbackImpact.swift; sourceTree = "<group>"; };
+		DEF61F632584D0AD007E6A9E /* HapticFeedbackImpactStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HapticFeedbackImpactStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,7 +186,7 @@
 				DEF61F602584D0AD007E6A9E /* HapticFeedbackError.swift */,
 				DEF61F612584D0AD007E6A9E /* HapticFeedbackEngineProtocol.swift */,
 				DEF61F622584D0AD007E6A9E /* HapticFeedback.swift */,
-				DEF61F632584D0AD007E6A9E /* HapticFeedbackImpact.swift */,
+				DEF61F632584D0AD007E6A9E /* HapticFeedbackImpactStyle.swift */,
 			);
 			path = HapticFeedback;
 			sourceTree = "<group>";
@@ -352,7 +352,7 @@
 				DEF61F662584D0AD007E6A9E /* HapticFeedbackEngineProtocol.swift in Sources */,
 				DEF61F442584D09B007E6A9E /* DeviceKit.swift in Sources */,
 				DEF61F452584D09B007E6A9E /* UIButton+HapticFeedback.swift in Sources */,
-				DEF61F682584D0AD007E6A9E /* HapticFeedbackImpact.swift in Sources */,
+				DEF61F682584D0AD007E6A9E /* HapticFeedbackImpactStyle.swift in Sources */,
 				DED9B3E7258620CB005792A9 /* Hapticable.swift in Sources */,
 				DEF61F462584D09B007E6A9E /* UIViewController.swift in Sources */,
 				DEF61F542584D0A5007E6A9E /* HapticFeedbackPattern.swift in Sources */,
