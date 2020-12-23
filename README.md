@@ -4,7 +4,7 @@
 
 <div align = "center">
   <a href="https://cocoapods.org/pods/haptic-feedback">
-    <img src="https://img.shields.io/cocoapods/v/NIO.svg?style=flat" />
+    <img src="https://img.shields.io/cocoapods/v/haptic-feedback.svg?style=flat" />
   </a>
   <a href="https://github.com/incetro/haptic-feedback">
     <img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" />
@@ -13,16 +13,12 @@
     <img src="https://img.shields.io/badge/compatible-swift%205.0-orange.svg" />
   </a>
 </div>
-
 <div align = "center">
-  <a href="https://travis-ci.org/incetro/DAO">
-    <img src="https://travis-ci.org/incetro/NIO.svg?branch=master" />
+  <a href="https://cocoapods.org/pods/haptic-feedback" target="blank">
+    <img src="https://img.shields.io/cocoapods/p/haptic-feedback.svg?style=flat" />
   </a>
-  <a href="https://cocoapods.org/pods/SwiftyDAO" target="blank">
-    <img src="https://img.shields.io/cocoapods/p/SwiftyDAO.svg?style=flat" />
-  </a>
-  <a href="https://cocoapods.org/pods/NIO" target="blank">
-    <img src="https://img.shields.io/cocoapods/l/NIO.svg?style=flat" />
+  <a href="https://cocoapods.org/pods/haptic-feedback" target="blank">
+    <img src="https://img.shields.io/cocoapods/l/haptic-feedback.svg?style=flat" />
   </a>
   <br>
   <br>
@@ -31,8 +27,7 @@
 *Haptic Feedback* is easy to use iOS haptic feedback generator. Besides default haptic feedbacks it can play patterns! Checkout 'ExampleHapticFeedback' project.
 
 
-- [Supported frameworks](#supported-frameworks)
-- [Example](#example)
+- [Example](https://github.com/Incetro/haptic-feedback/HapticFeedbackExample) 
 - [Usage](#Usage)
 	1. [Generating predefined default feedbacks](#predefined-feedbacks)
 	2. [Generating impact feedbacks](#impact-feedbacks)
@@ -43,28 +38,18 @@
 - [Installation](#installation)
 - [Authors](#license)
 
-## Supported frameworks
-- [x] DeviceKit
-
 ## Example project <a name="Example project"></a>
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
 ## Usage <a name="Usage"></a>
 
-To use a *Haptic Feedback* instance, first of all you will need to import HapticFeedback module into your swift file. And make the extension to the desired class using the 'Hapticable' protocol:
+To use a *Haptic Feedback* instance, first of all you will need to import HapticFeedback module into your swift file:
 
 ```swift
 import HapticFeedback
 ```
 
-```swift
-// MARK: - Hapticable
-
-extension YourClass: Hapticable {
-/// You can now use the 'hapticFeedback' instance here
-}
-```
 Keep in mind that depending on the device you are using - the feedback might be different. Starting from iPhone 7 all the iPhones are coming with haptic engine. Prior to iPhone 7 *HapticFeedback* will use standard vibration. Also Pattern play and impacts are not supported on devices prior to iPhone 7 and iOS 10
 
 ### 1. Generating predefined default feedbacks. <a name="predefined-feedbacks"></a>
@@ -239,7 +224,7 @@ If you prefer not to use any dependency managers, you can integrate *Haptic feed
 
 ## Authors <a name="authors"></a>
 
-Gasol: 1ezya007@gmail.com, Incetro: incetro@ya.ru
+Gasol: 1ezya007@gmail.com, incetro: incetro@ya.ru
 
 
 ## License <a name="license"></a>
