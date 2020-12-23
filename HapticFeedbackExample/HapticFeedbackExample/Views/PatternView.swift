@@ -27,7 +27,7 @@ final class PatternView: ExampleStackCell {
     private let secondStackView = UIStackView()
 
     /// Pattern label
-    private lazy var patternLabel: UILabel = {
+    private let patternLabel: UILabel = {
         let patternLabel = UILabel()
         patternLabel.text = "..oO-Oo.."
         patternLabel.textAlignment = .center
@@ -156,7 +156,7 @@ extension PatternView {
 extension PatternView: Hapticable {
 
     @objc private func inputAction(sender: UIButton) {
-        guard patternLabel.text?.count ?? 0 <= 45 else { return }
+        guard patternLabel.text?.count ?? 0 <= Constants.maxChar else { return }
         if patternLabel.text == "pattern.title".localized() {
             patternLabel.text = ""
         }
@@ -171,8 +171,8 @@ extension PatternView: Hapticable {
 
     @objc private func clearAction() {
         patternLabel.text = "pattern.title".localized()
-        patternLabel.font = UIFont(name: "SF Pro Rounded", size: 19) ?? UIFont.systemFont(ofSize: 19)
-        patternLabel.textColor = .gray
+        patternLabel.font = appearance.clearTitleFont
+        patternLabel.textColor = appearance.clearTitleColor
         playButton.isEnabled = false
     }
 
@@ -195,5 +195,6 @@ extension PatternView {
         static let patternLabelHeight: CGFloat = 180
         static let firstStackViewSpacing: CGFloat = 8
         static let secondStackViewSpacing: CGFloat = 16
+        static let maxChar = 45
     }
 }

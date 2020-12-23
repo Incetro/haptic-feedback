@@ -56,11 +56,11 @@ class ExampleShadowButton: ExampleRoundedButton {
         )
         let shadowFrame = frame
             .insetBy(dx: -2 * Constants.shadowRadius, dy: -2 * Constants.shadowRadius)
-            .offsetBy(dx: Constants.xOffset, dy: Constants.yOffset)
+            .offsetBy(dx: Constants.shadowOffset.width, dy: Constants.shadowOffset.height)
         let shadowRect = CGRect(origin: .zero, size: shadowFrame.size)
         let shadowTransform = CGAffineTransform(
-            translationX: -frame.origin.x - Constants.xOffset + 2 * Constants.shadowRadius,
-            y: -frame.origin.y - Constants.yOffset + 2 * Constants.shadowRadius
+            translationX: -frame.origin.x - Constants.shadowOffset.width + 2 * Constants.shadowRadius,
+            y: -frame.origin.y - Constants.shadowOffset.height + 2 * Constants.shadowRadius
         )
         let shadowLayer = CALayer()
         shadowLayer.shadowOffset = Constants.shadowOffset
@@ -106,7 +106,5 @@ extension ExampleShadowButton {
         static let shadowRadius: CGFloat = 20
         static let shadowOpacity: Float = 1
         static let shadowOffset = CGSize(width: 4, height: 6)
-        static let xOffset: CGFloat = 4
-        static let yOffset: CGFloat = 6
     }
 }

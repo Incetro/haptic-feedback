@@ -19,6 +19,8 @@ struct PatternViewAppearance {
     let patternButtonAppearance: ShadowButtonAppearance
     let patternTitleFont: UIFont
     let titleTextColor: UIColor
+    let clearTitleFont: UIFont
+    let clearTitleColor: UIColor
 
     // MARK: - Static
 
@@ -32,7 +34,9 @@ struct PatternViewAppearance {
             cancelButtonAppearance: ShadowButtonAppearance(titleFont: UIFont(name: "SF Pro Rounded", size: 30) ?? UIFont.systemFont(ofSize: 30)),
             patternButtonAppearance: ShadowButtonAppearance(titleFont: UIFont(name: "SF Pro Rounded", size: 30) ?? UIFont.systemFont(ofSize: 30)),
             patternTitleFont: UIFont(name: "SF Pro Rounded", size: 30) ?? UIFont.systemFont(ofSize: 30),
-            titleTextColor: .black
+            titleTextColor: .black,
+            clearTitleFont: UIFont(name: "SF Pro Rounded", size: 19) ?? UIFont.systemFont(ofSize: 19),
+            clearTitleColor: .gray
         )
     }
 }

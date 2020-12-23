@@ -15,7 +15,7 @@ class ExampleRoundedButton: HapticFeedbackButton {
     // MARK: - Properties
 
     /// Bouncing transform
-    private let bouncingTransform: CGAffineTransform = .init(scaleX: Constants.highlightScale, y: Constants.highlightScale)
+    private let bouncingTransform: CGAffineTransform = .init(scaleX: Constants.highlightingScale, y: Constants.highlightingScale)
 
     // MARK: - Overrides
 
@@ -114,7 +114,7 @@ extension ExampleRoundedButton {
     enum Constants {
         static let cornerRadius: CGFloat = 21
         static let animationDuration: Double = 0.175
-        static let highlightScale: CGFloat = 0.94
+        static let highlightingScale: CGFloat = 0.94
         static let touchInsideScale: CGFloat = 0.95
     }
 }
