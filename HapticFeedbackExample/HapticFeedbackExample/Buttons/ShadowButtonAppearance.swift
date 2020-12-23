@@ -10,8 +10,13 @@ import UIKit
 // MARK: - ShadowButtonAppearance
 
 struct ShadowButtonAppearance {
+
+    // MARK: - Properties
+    
     let shadowColor: CGColor
     let titleFont: UIFont
+
+    // MARK: - Static
 
     static var `default`: ShadowButtonAppearance {
         .init(
@@ -28,6 +33,6 @@ struct ShadowButtonAppearance {
     }
 
      init(titleFont: UIFont) {
-        self.init(shadowColor: UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor, titleFont: titleFont)
+        self.init(shadowColor: ShadowButtonAppearance.default.shadowColor, titleFont: titleFont)
     }
 }

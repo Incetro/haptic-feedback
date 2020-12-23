@@ -10,5 +10,5 @@
 protocol PatternViewDelegate: class {
 
     /// Pattern view was changed
-    func didChangePattrnView()
+    func didChangePatternView()
 }

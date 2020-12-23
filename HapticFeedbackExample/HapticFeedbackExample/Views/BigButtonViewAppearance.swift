@@ -10,9 +10,14 @@ import UIKit
 // MARK: - BigButtonViewAppearance
 
 struct BigButtonViewAppearance {
+
+    // MARK: - Properties
+    
     let exampleStackViewCellAppearance: ExampleStackViewCellAppearance
     let bigButtonAppearance: GradientButtonAppearance
     let buttonFont: UIFont
+
+    // MARK: - Static
 
     static var `default`: BigButtonViewAppearance {
         .init(

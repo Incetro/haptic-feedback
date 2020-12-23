@@ -12,13 +12,15 @@ import HapticFeedback
 
 final class BigButtonView: ExampleStackCell {
 
+    // MARK: - Properties
+
     /// Appearance instance
     private let appearance: BigButtonViewAppearance
 
     /// Big button
     private lazy var bigButton: ExampleGradientButton = {
         let bigButton = ExampleGradientButton(appearance: .default)
-        bigButton.setTitle("Button".localized(), for: .normal)
+        bigButton.setTitle("big-button.button".localized(), for: .normal)
         bigButton.isHapticEnabled = true
         return bigButton
     }()
@@ -31,7 +33,7 @@ final class BigButtonView: ExampleStackCell {
         self.appearance = appearance
         super.init(
             appearance: appearance.exampleStackViewCellAppearance,
-            title: "BigButtonTitle".localized()
+            title: "big-button.title".localized()
         )
         setup()
         setupAppearance()
@@ -51,7 +53,7 @@ extension BigButtonView {
     }
 }
 
-// MARK: - Layout
+// MARK: - Setup
 
 extension BigButtonView {
 
@@ -62,18 +64,21 @@ extension BigButtonView {
     private func setupBigButton() {
         addSubview(bigButton)
         bigButton.translatesAutoresizingMaskIntoConstraints = false
-        bigButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: LayoutConstants.topInset).isActive = true
+        bigButton.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.topInset).isActive = true
         bigButton.widthAnchor.constraint(equalTo: titleLabel.widthAnchor).isActive = true
         bigButton.leftAnchor.constraint(equalTo: titleLabel.leftAnchor).isActive = true
-        bigButton.heightAnchor.constraint(equalToConstant: LayoutConstants.bigButtonHeight).isActive = true
-        bigButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -LayoutConstants.inset).isActive = true
+        bigButton.heightAnchor.constraint(equalToConstant: Constants.bigButtonHeight).isActive = true
+        bigButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Constants.inset).isActive = true
     }
 }
 
-// MARK: - LayoutConstants
+// MARK: - Constants
 
-private enum LayoutConstants {
-    static let topInset: CGFloat = 32
-    static let inset: CGFloat = 72
-    static let bigButtonHeight: CGFloat = 84
+extension BigButtonView {
+
+    enum Constants {
+        static let topInset: CGFloat = 32
+        static let inset: CGFloat = 72
+        static let bigButtonHeight: CGFloat = 84
+    }
 }

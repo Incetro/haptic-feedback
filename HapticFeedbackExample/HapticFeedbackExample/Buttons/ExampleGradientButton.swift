@@ -12,6 +12,8 @@ import HapticFeedback
 
 class ExampleGradientButton: ExampleShadowButton {
 
+    // MARK: - Properties
+
     /// Appearance instance
     private let appearance: GradientButtonAppearance
 
@@ -63,12 +65,15 @@ extension ExampleGradientButton {
 
 // MARK: - Constants
 
-private enum Constants {
-    static let cornerRadius: CGFloat = 21
-    static let shadowRadius: CGFloat = 20
-    static let shadowOpacity: Float = 1
-    static let startPoint = CGPoint(x: 0, y: 0)
-    static let endPoint = CGPoint(x: 1, y: 0)
-    static let shadowOffset = CGSize(width: 0, height: 0)
-    static let locations: [NSNumber] = [0, 1]
+extension ExampleGradientButton {
+
+    enum Constants {
+        static let cornerRadius: CGFloat = 21
+        static let shadowRadius: CGFloat = 20
+        static let shadowOpacity: Float = 1
+        static let startPoint = CGPoint(x: 0, y: 0)
+        static let endPoint = CGPoint(x: 1, y: 0)
+        static let shadowOffset = CGSize(width: 0, height: 0)
+        static let locations: [NSNumber] = [0, 1]
+    }
 }

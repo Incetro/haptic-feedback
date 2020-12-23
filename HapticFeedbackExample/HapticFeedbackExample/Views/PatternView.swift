@@ -12,6 +12,8 @@ import HapticFeedback
 
 final class PatternView: ExampleStackCell {
 
+    // MARK: - Properties
+
     /// Delegate
     weak var delegate: PatternViewDelegate?
 
@@ -19,13 +21,13 @@ final class PatternView: ExampleStackCell {
     private let appearance: PatternViewAppearance
 
     /// First stack view
-    private var firstStackView = UIStackView()
+    private let firstStackView = UIStackView()
 
     /// Second stack view
-    private var secondStackView = UIStackView()
+    private let secondStackView = UIStackView()
 
     /// Pattern label
-     lazy var patternLabel: UILabel = {
+    private lazy var patternLabel: UILabel = {
         let patternLabel = UILabel()
         patternLabel.text = "..oO-Oo.."
         patternLabel.textAlignment = .center
@@ -54,7 +56,7 @@ final class PatternView: ExampleStackCell {
     init(appearance: PatternViewAppearance) {
         self.appearance = appearance
         super.init(
-            appearance: appearance.exampleStackViewCellAppearance, title: "PatternHeadTitle".localized()
+            appearance: appearance.exampleStackViewCellAppearance, title: "pattern.head-title".localized()
         )
         setup()
         setupAppearance()
@@ -75,7 +77,7 @@ extension PatternView {
     }
 }
 
-// MARK: - Layout
+// MARK: - Setup
 
 extension PatternView {
 
@@ -92,19 +94,23 @@ extension PatternView {
     private func setupPatternLabel() {
         addSubview(patternLabel)
         patternLabel.translatesAutoresizingMaskIntoConstraints = false
-        patternLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: LayoutConstants.verticalInset).isActive = true
-        patternLabel.heightAnchor.constraint(equalToConstant: LayoutConstants.patternLabelHeight).isActive = true
+        patternLabel.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.verticalInset).isActive = true
+        patternLabel.heightAnchor.constraint(equalToConstant: Constants.patternLabelHeight).isActive = true
         patternLabel.leftAnchor.constraint(equalTo: titleLabel.leftAnchor).isActive = true
         patternLabel.rightAnchor.constraint(equalTo: titleLabel.rightAnchor).isActive = true
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(deleteLastChar))
+        swipeLeft.direction = .left
+        patternLabel.addGestureRecognizer(swipeLeft)
+        patternLabel.isUserInteractionEnabled = true
     }
 
     private func setupFirstStackView() {
         firstStackView.axis = .horizontal
-        firstStackView.spacing = 8
+        firstStackView.spacing = Constants.firstStackViewSpacing
         firstStackView.distribution = .fillEqually
         addSubview(firstStackView)
         firstStackView.translatesAutoresizingMaskIntoConstraints = false
-        firstStackView.topAnchor.constraint(equalTo: patternLabel.bottomAnchor, constant: LayoutConstants.verticalInset).isActive = true
+        firstStackView.topAnchor.constraint(equalTo: patternLabel.bottomAnchor, constant: Constants.verticalInset).isActive = true
         firstStackView.widthAnchor.constraint(equalTo: titleLabel.widthAnchor).isActive = true
         firstStackView.leftAnchor.constraint(equalTo: titleLabel.leftAnchor).isActive = true
     }
@@ -122,14 +128,14 @@ extension PatternView {
 
     private func setupSecondStackView() {
         secondStackView.axis = .horizontal
-        secondStackView.spacing = 16
+        secondStackView.spacing = Constants.secondStackViewSpacing
         firstStackView.distribution = .fillEqually
         addSubview(secondStackView)
         secondStackView.translatesAutoresizingMaskIntoConstraints = false
-        secondStackView.topAnchor.constraint(equalTo: firstStackView.bottomAnchor, constant: LayoutConstants.verticalInset).isActive = true
-        secondStackView.leftAnchor.constraint(equalTo: titleLabel.leftAnchor, constant: LayoutConstants.horizontalInset).isActive = true
-        secondStackView.rightAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: -LayoutConstants.horizontalInset).isActive = true
-        secondStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -LayoutConstants.verticalInset).isActive = true
+        secondStackView.topAnchor.constraint(equalTo: firstStackView.bottomAnchor, constant: Constants.verticalInset).isActive = true
+        secondStackView.leftAnchor.constraint(equalTo: titleLabel.leftAnchor, constant: Constants.horizontalInset).isActive = true
+        secondStackView.rightAnchor.constraint(equalTo: titleLabel.rightAnchor, constant: -Constants.horizontalInset).isActive = true
+        secondStackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Constants.verticalInset).isActive = true
     }
 
     private func setupCancelButton() {
@@ -145,20 +151,13 @@ extension PatternView {
     }
 }
 
-// MARK: - LayoutConstants
-
-private enum LayoutConstants {
-    static let verticalInset: CGFloat = 32
-    static let horizontalInset: CGFloat = 34
-    static let patternLabelHeight: CGFloat = 180
-}
-
 // MARK: - Actions
 
 extension PatternView: Hapticable {
 
     @objc private func inputAction(sender: UIButton) {
-        if patternLabel.text == "PatternTitle".localized() {
+        guard patternLabel.text?.count ?? 0 <= 45 else { return }
+        if patternLabel.text == "pattern.title".localized() {
             patternLabel.text = ""
         }
         patternLabel.text?.append(sender.titleLabel?.text ?? "")
@@ -166,18 +165,35 @@ extension PatternView: Hapticable {
             patternLabel.textColor = appearance.titleTextColor
             patternLabel.font = appearance.patternTitleFont
         }
-        delegate?.didChangePattrnView()
+        playButton.isEnabled = true
+        delegate?.didChangePatternView()
     }
 
     @objc private func clearAction() {
-        patternLabel.text = "PatternTitle".localized()
+        patternLabel.text = "pattern.title".localized()
         patternLabel.font = UIFont(name: "SF Pro Rounded", size: 19) ?? UIFont.systemFont(ofSize: 19)
         patternLabel.textColor = .gray
+        playButton.isEnabled = false
     }
 
     @objc private func playAction() {
-        if patternLabel.textColor != .gray {
-            hapticFeedback.generate(patternLabel.text ?? "", delay: 0.1)
-        }
+        hapticFeedback.generate(patternLabel.text ?? "", delay: 0.1)
+    }
+
+    @objc private func deleteLastChar() {
+        patternLabel.text?.removeLast()
+    }
+}
+
+// MARK: - Constants
+
+extension PatternView {
+
+    enum Constants {
+        static let verticalInset: CGFloat = 32
+        static let horizontalInset: CGFloat = 34
+        static let patternLabelHeight: CGFloat = 180
+        static let firstStackViewSpacing: CGFloat = 8
+        static let secondStackViewSpacing: CGFloat = 16
     }
 }

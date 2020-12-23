@@ -10,8 +10,13 @@ import UIKit
 // MARK: - ExampleStackViewCellAppearance
 
 struct ExampleStackViewCellAppearance {
+
+    // MARK: - Properties
+    
     let textFont: UIFont
     let textColor: UIColor
+
+    // MARK: - Static
 
     static var `default`: ExampleStackViewCellAppearance {
         .init(

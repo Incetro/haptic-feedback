@@ -9,7 +9,9 @@ import UIKit
 
 // MARK: - ExampleStackCell
 
- class ExampleStackCell: UIView {
+class ExampleStackCell: UIView {
+
+    // MARK: - Properties
 
     /// Appearance instance
     private let appearance: ExampleStackViewCellAppearance
@@ -35,7 +37,7 @@ import UIKit
     }
 }
 
-// MARK: - Layout
+// MARK: - Setup
 
 extension ExampleStackCell {
 
@@ -47,8 +49,8 @@ extension ExampleStackCell {
         addSubview(titleLabel)
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.topAnchor.constraint(equalTo: self.topAnchor).isActive = true
-        titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: LayoutConstants.horizontalInset).isActive = true
-        titleLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -LayoutConstants.horizontalInset).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Constants.horizontalInset).isActive = true
+        titleLabel.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -Constants.horizontalInset).isActive = true
     }
 }
 
@@ -63,8 +65,11 @@ extension ExampleStackCell {
     }
 }
 
-// MARK: - LayoutConstants
+// MARK: - Constants
 
-private enum LayoutConstants {
-    static let horizontalInset: CGFloat = 42
+extension ExampleStackCell {
+
+    enum Constants {
+        static let horizontalInset: CGFloat = 42
+    }
 }

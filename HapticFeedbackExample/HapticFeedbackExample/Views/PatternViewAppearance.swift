@@ -10,12 +10,17 @@ import UIKit
 // MARK: - PatternViewAppearance
 
 struct PatternViewAppearance {
+
+    // MARK: - Properties
+    
     let exampleStackViewCellAppearance: ExampleStackViewCellAppearance
     let playButtonAppearance: GradientButtonAppearance
     let cancelButtonAppearance: ShadowButtonAppearance
     let patternButtonAppearance: ShadowButtonAppearance
     let patternTitleFont: UIFont
     let titleTextColor: UIColor
+
+    // MARK: - Static
 
     static var `default`: PatternViewAppearance {
         .init(

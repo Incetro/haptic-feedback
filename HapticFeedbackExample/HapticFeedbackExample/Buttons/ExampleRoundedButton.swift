@@ -12,21 +12,19 @@ import HapticFeedback
 
 class ExampleRoundedButton: HapticFeedbackButton {
 
-    /// Bouncing transform
-    public var bouncingTransform: CGAffineTransform = .init(scaleX: 0.94, y: 0.94)
+    // MARK: - Properties
 
-    /// Bouncing flag
-    public var isBouncingEnabled = true
+    /// Bouncing transform
+    private let bouncingTransform: CGAffineTransform = .init(scaleX: Constants.highlightScale, y: Constants.highlightScale)
 
     // MARK: - Overrides
 
     override public var isHighlighted: Bool {
         didSet {
-            guard isBouncingEnabled else { return }
-            let transform: CGAffineTransform = isHighlighted ? bouncingTransform : .identity
+            let transform = isHighlighted ? bouncingTransform : .identity
             animate(transform)
             if isTouchInside {
-                let transform: CGAffineTransform = bouncingTransform
+                let transform = bouncingTransform
                 animate(transform)
             }
         }
@@ -48,12 +46,17 @@ class ExampleRoundedButton: HapticFeedbackButton {
 
     public override func layoutSubviews() {
         super.layoutSubviews()
-        smoothlyRoundCourners(.allCorners, radius: LayoutConstants.cornerRadius)
+        smoothlyRoundCourners(.allCorners, radius: Constants.cornerRadius)
     }
 
-    // MARK: - Useful
+    // MARK: - Private
 
-    private func smoothlyRoundCourners(_ corners: UIRectCorner = .allCorners, radius: CGFloat, inRect rect: CGRect? = nil) {
+    /// Need to smoothly round corners
+    private func smoothlyRoundCourners(
+        _ corners: UIRectCorner = .allCorners,
+        radius: CGFloat,
+        inRect rect: CGRect? = nil
+    ) {
         let roundPath = UIBezierPath(
             roundedRect: rect ?? bounds,
             byRoundingCorners: corners,
@@ -75,12 +78,18 @@ extension ExampleRoundedButton {
 
     @objc private func touchInside() {
         UIView.animate(
-            withDuration: 0.175,
+            withDuration: Constants.animationDuration,
+            delay: 0,
+            options: [.allowUserInteraction],
             animations: {
-                self.transform = CGAffineTransform(scaleX: 0.95, y: 0.95)
+                self.transform = CGAffineTransform(scaleX: Constants.touchInsideScale, y: Constants.touchInsideScale)
             },
             completion: { _ in
-                UIView.animate(withDuration: 0.175) {
+                UIView.animate(
+                    withDuration: Constants.animationDuration,
+                    delay: 0,
+                    options: [.allowUserInteraction]
+                ) {
                     self.transform = CGAffineTransform.identity
                 }
             }
@@ -89,17 +98,23 @@ extension ExampleRoundedButton {
 
     private func animate(_ transform: CGAffineTransform) {
         UIView.animate(
-            withDuration: 0.175,
+            withDuration: Constants.animationDuration,
             delay: 0,
-            options: [.curveEaseIn]
+            options: [.curveEaseIn, .allowUserInteraction]
         ) {
             self.transform = transform
         }
     }
 }
 
-// MARK: - LayoutConstants
+// MARK: - Constants
 
-private enum LayoutConstants {
-    static let cornerRadius: CGFloat = 21
+extension ExampleRoundedButton {
+    
+    enum Constants {
+        static let cornerRadius: CGFloat = 21
+        static let animationDuration: Double = 0.175
+        static let highlightScale: CGFloat = 0.94
+        static let touchInsideScale: CGFloat = 0.95
+    }
 }

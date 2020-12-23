@@ -11,6 +11,8 @@ import UIKit
 
 class ExampleShadowButton: ExampleRoundedButton {
 
+    // MARK: - Properties
+
     /// Appearance instance
     private let appearance: ShadowButtonAppearance
 
@@ -97,11 +99,14 @@ extension ExampleShadowButton {
 
 // MARK: - Constants
 
-private enum Constants {
-    static let cornerRadius: CGFloat = 21
-    static let shadowRadius: CGFloat = 20
-    static let shadowOpacity: Float = 1
-    static let shadowOffset = CGSize(width: 4, height: 6)
-    static let xOffset: CGFloat = 4
-    static let yOffset: CGFloat = 6
+extension ExampleShadowButton {
+
+    enum Constants {
+        static let cornerRadius: CGFloat = 21
+        static let shadowRadius: CGFloat = 20
+        static let shadowOpacity: Float = 1
+        static let shadowOffset = CGSize(width: 4, height: 6)
+        static let xOffset: CGFloat = 4
+        static let yOffset: CGFloat = 6
+    }
 }

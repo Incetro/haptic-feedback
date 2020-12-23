@@ -1,5 +1,5 @@
 //
-//  SixButtonsView.swift
+//  ImpactButtonsView.swift
 //  HapticFeedbackExample
 //
 //  Created by Alexander Lezya on 15.12.2020.
@@ -8,24 +8,26 @@
 import UIKit
 import HapticFeedback
 
-// MARK: - SixButtonsView
+// MARK: - ImpactButtonsView
 
-final class SixButtonsView: ExampleStackCell {
+final class ImpactButtonsView: ExampleStackCell {
+
+    // MARK: - Properties
 
     /// Delegate
-    weak var delegate: SixButtonsViewDelegate?
+    weak var delegate: ImpactButtonsViewDelegate?
 
     /// Appearance instance
     private let appearance: ExampleStackViewCellAppearance
 
     /// Stack view
-    private var stackView = UIStackView()
+    private let stackView = UIStackView()
 
     /// Left stackView
-    private var leftStackView = UIStackView()
+    private let leftStackView = UIStackView()
 
     /// Right stackView
-    private var rightStackView = UIStackView()
+    private let rightStackView = UIStackView()
 
     // MARK: - Initializers
 
@@ -33,7 +35,7 @@ final class SixButtonsView: ExampleStackCell {
     /// - Parameter appearance: appearance instance
     init(appearance: ExampleStackViewCellAppearance) {
         self.appearance = appearance
-        super.init(appearance: appearance, title: "SixButtonsTitle".localized())
+        super.init(appearance: appearance, title: "impact-buttons.title".localized())
         setup()
     }
 
@@ -44,7 +46,7 @@ final class SixButtonsView: ExampleStackCell {
 
 // MARK: - Layout
 
-extension SixButtonsView {
+extension ImpactButtonsView {
 
     private func setup() {
         setupStackView()
@@ -57,55 +59,49 @@ extension SixButtonsView {
     private func setupStackView() {
         stackView.axis = .horizontal
         stackView.distribution = .fillEqually
-        stackView.spacing = 40
+        stackView.spacing = Constants.stackViewSpacing
         addSubview(stackView)
         stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: LayoutConstants.verticalInset).isActive = true
-        stackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: LayoutConstants.horizontalInset).isActive = true
-        stackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -LayoutConstants.horizontalInset).isActive = true
-        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -72).isActive = true
+        stackView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: Constants.verticalInset).isActive = true
+        stackView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: Constants.horizontalInset).isActive = true
+        stackView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -Constants.horizontalInset).isActive = true
+        stackView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -Constants.bottomInset).isActive = true
     }
 
     private func setupLeftStackView() {
         leftStackView.axis = .vertical
-        leftStackView.spacing = 44
+        leftStackView.spacing = Constants.subStackViewSpacing
         leftStackView.distribution = .equalSpacing
         stackView.addArrangedSubview(leftStackView)
     }
 
     private func setupRightStackView() {
         rightStackView.axis = .vertical
-        rightStackView.spacing = 44
+        rightStackView.spacing = Constants.subStackViewSpacing
         rightStackView.distribution = .equalSpacing
         stackView.addArrangedSubview(rightStackView)
     }
 
     private func setupLeftButtons() {
         let impacts: [HapticFeedbackNotification] = [.success, .error, .warning]
-        for (index, title) in [
-            "Success",
-            "Error",
-            "Warning"
-        ].enumerated() {
+        let titles = ["success", "error", "warning"]
+        for (title, impact) in zip(titles, impacts) {
             let button = ExampleGradientButton(appearance: .default)
             button.setTitle(title.localized(), for: .normal)
             button.widthAnchor.constraint(equalTo: button.heightAnchor).isActive = true
-            button.addAction(UIAction(handler: { _ in self.impactAction(impact: impacts[index]) }), for: .touchUpInside)
+            button.addAction(UIAction(handler: { _ in self.impactAction(impact: impact) }), for: .touchUpInside)
             leftStackView.addArrangedSubview(button)
         }
     }
 
     private func setupRightButtons() {
         let impacts: [HapticFeedbackNotification] = [.success, .error, .warning]
-        for (index, title) in [
-            "Success alert",
-            "Error alert",
-            "Warning alert"
-        ].enumerated() {
+        let titles = ["success-alert", "error-alert", "warning-alert"]
+        for (title, impact) in zip(titles, impacts) {
             let button = ExampleGradientButton(appearance: .default)
             button.setTitle(title.localized(), for: .normal)
             button.widthAnchor.constraint(equalTo: button.heightAnchor).isActive = true
-            button.addAction(UIAction(handler: { _ in self.alertAction(impact: impacts[index], title: title) }), for: .touchUpInside)
+            button.addAction(UIAction(handler: { _ in self.alertAction(impact: impact, title: title) }), for: .touchUpInside)
             rightStackView.addArrangedSubview(button)
         }
     }
@@ -113,7 +109,7 @@ extension SixButtonsView {
 
 // MARK: - Hapticable
 
-extension SixButtonsView: Hapticable {
+extension ImpactButtonsView: Hapticable {
 
     private func impactAction(impact: HapticFeedbackNotification) {
         hapticFeedback.generate(impact)
@@ -124,9 +120,15 @@ extension SixButtonsView: Hapticable {
     }
 }
 
-// MARK: - LayoutConstants
+// MARK: - Constants
 
-private enum LayoutConstants {
-    static let horizontalInset: CGFloat = 48
-    static let verticalInset: CGFloat = 44
+extension ImpactButtonsView {
+    
+    enum Constants {
+        static let horizontalInset: CGFloat = 48
+        static let verticalInset: CGFloat = 44
+        static let stackViewSpacing: CGFloat = 40
+        static let subStackViewSpacing: CGFloat = 44
+        static let bottomInset: CGFloat = 72
+    }
 }

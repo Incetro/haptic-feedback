@@ -12,6 +12,8 @@ import AloeStackView
 
 final class HeaderView: UIView {
 
+    // MARK: - Properties
+
     /// Title label
     private lazy var titleLabel: UILabel = {
         let titleLabel = UILabel()
@@ -34,7 +36,7 @@ final class HeaderView: UIView {
     }
 }
 
-// MARK: - Layout
+// MARK: - Setup
 
 extension HeaderView {
 

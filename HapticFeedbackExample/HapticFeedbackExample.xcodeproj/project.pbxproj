@@ -13,7 +13,7 @@
 		DE2E1B802588E82900AD742D /* ExampleShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1B7F2588E82900AD742D /* ExampleShadowButton.swift */; };
 		DE2E1B832589090900AD742D /* ExampleRoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1B822589090900AD742D /* ExampleRoundedButton.swift */; };
 		DE2E1B8D2589331A00AD742D /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1B8C2589331A00AD742D /* HeaderView.swift */; };
-		DE2E1B94258940C800AD742D /* SixButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1B93258940C800AD742D /* SixButtonsView.swift */; };
+		DE2E1B94258940C800AD742D /* ImpactButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1B93258940C800AD742D /* ImpactButtonsView.swift */; };
 		DE2E1B9B258A50A500AD742D /* ExampleStackCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1B9A258A50A500AD742D /* ExampleStackCell.swift */; };
 		DE2E1B9E258A53A200AD742D /* ExampleStackViewCellAppearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1B9D258A53A200AD742D /* ExampleStackViewCellAppearance.swift */; };
 		DE2E1BA2258A75E300AD742D /* BigButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2E1BA1258A75E300AD742D /* BigButtonView.swift */; };
@@ -25,7 +25,7 @@
 		DE39EBD5258CDD8E00BE8A3B /* ExtensionUILabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39EBD4258CDD8E00BE8A3B /* ExtensionUILabel.swift */; };
 		DE39EBD9258CE4D100BE8A3B /* ExtensionString.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39EBD8258CE4D100BE8A3B /* ExtensionString.swift */; };
 		DE39EBDF258D4DC900BE8A3B /* PatternViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39EBDE258D4DC900BE8A3B /* PatternViewDelegate.swift */; };
-		DE39EBEB258E3D0400BE8A3B /* SixButtonsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39EBEA258E3D0400BE8A3B /* SixButtonsViewDelegate.swift */; };
+		DE39EBEB258E3D0400BE8A3B /* ImpactButtonsViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE39EBEA258E3D0400BE8A3B /* ImpactButtonsViewDelegate.swift */; };
 		DE3AC2CD258795D900779520 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3AC2CC258795D900779520 /* AppDelegate.swift */; };
 		DE3AC2CF258795D900779520 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3AC2CE258795D900779520 /* SceneDelegate.swift */; };
 		DE3AC2D1258795D900779520 /* ExampleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3AC2D0258795D900779520 /* ExampleViewController.swift */; };
@@ -42,7 +42,7 @@
 		DE2E1B7F2588E82900AD742D /* ExampleShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleShadowButton.swift; sourceTree = "<group>"; };
 		DE2E1B822589090900AD742D /* ExampleRoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleRoundedButton.swift; sourceTree = "<group>"; };
 		DE2E1B8C2589331A00AD742D /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
-		DE2E1B93258940C800AD742D /* SixButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixButtonsView.swift; sourceTree = "<group>"; };
+		DE2E1B93258940C800AD742D /* ImpactButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactButtonsView.swift; sourceTree = "<group>"; };
 		DE2E1B9A258A50A500AD742D /* ExampleStackCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStackCell.swift; sourceTree = "<group>"; };
 		DE2E1B9D258A53A200AD742D /* ExampleStackViewCellAppearance.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleStackViewCellAppearance.swift; sourceTree = "<group>"; };
 		DE2E1BA1258A75E300AD742D /* BigButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButtonView.swift; sourceTree = "<group>"; };
@@ -54,7 +54,7 @@
 		DE39EBD4258CDD8E00BE8A3B /* ExtensionUILabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionUILabel.swift; sourceTree = "<group>"; };
 		DE39EBD8258CE4D100BE8A3B /* ExtensionString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionString.swift; sourceTree = "<group>"; };
 		DE39EBDE258D4DC900BE8A3B /* PatternViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PatternViewDelegate.swift; sourceTree = "<group>"; };
-		DE39EBEA258E3D0400BE8A3B /* SixButtonsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SixButtonsViewDelegate.swift; sourceTree = "<group>"; };
+		DE39EBEA258E3D0400BE8A3B /* ImpactButtonsViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImpactButtonsViewDelegate.swift; sourceTree = "<group>"; };
 		DE3AC2C9258795D900779520 /* HapticFeedbackExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HapticFeedbackExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE3AC2CC258795D900779520 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DE3AC2CE258795D900779520 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -97,8 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				DE2E1B8C2589331A00AD742D /* HeaderView.swift */,
-				DE2E1B93258940C800AD742D /* SixButtonsView.swift */,
-				DE39EBEA258E3D0400BE8A3B /* SixButtonsViewDelegate.swift */,
+				DE2E1B93258940C800AD742D /* ImpactButtonsView.swift */,
+				DE39EBEA258E3D0400BE8A3B /* ImpactButtonsViewDelegate.swift */,
 				DE2E1BA1258A75E300AD742D /* BigButtonView.swift */,
 				DE39EBC4258CD5D300BE8A3B /* BigButtonViewAppearance.swift */,
 				DE39EB6A258A954E00BE8A3B /* PatternView.swift */,
@@ -277,10 +277,10 @@
 				DE2E1B7C2588048600AD742D /* GradientButtonAppearance.swift in Sources */,
 				DE3AC2D1258795D900779520 /* ExampleViewController.swift in Sources */,
 				DE39EB6B258A954E00BE8A3B /* PatternView.swift in Sources */,
-				DE39EBEB258E3D0400BE8A3B /* SixButtonsViewDelegate.swift in Sources */,
+				DE39EBEB258E3D0400BE8A3B /* ImpactButtonsViewDelegate.swift in Sources */,
 				DE39EBDF258D4DC900BE8A3B /* PatternViewDelegate.swift in Sources */,
 				DE3AC2CD258795D900779520 /* AppDelegate.swift in Sources */,
-				DE2E1B94258940C800AD742D /* SixButtonsView.swift in Sources */,
+				DE2E1B94258940C800AD742D /* ImpactButtonsView.swift in Sources */,
 				DE2E1B832589090900AD742D /* ExampleRoundedButton.swift in Sources */,
 				DE3AC2F52587BF8A00779520 /* ExampleGradientButton.swift in Sources */,
 				DE2E1BA2258A75E300AD742D /* BigButtonView.swift in Sources */,

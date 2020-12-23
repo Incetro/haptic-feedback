@@ -13,16 +13,18 @@ import HapticFeedback
 
 final class ExampleViewController: AloeStackViewController {
 
-    /// HeaderView instance
+    // MARK: - Properties
+
+    /// HeaderView - Main title
     private let headerView = HeaderView()
 
-    /// SixButtonsView instance
-    private let sixButtonsView = SixButtonsView(appearance: .default)
+    /// ImpactButtonsView - Buttons with impacts feedback
+    private let impactButtonsView = ImpactButtonsView(appearance: .default)
 
-    /// BigButtonView instance
+    /// BigButtonView - HapticFeedbackButton instance
     private let bigButtonView = BigButtonView(appearance: .default)
 
-    /// PatternView instance
+    /// PatternView - view for create and play custom impact patterns
     private let patternView = PatternView(appearance: .default)
 
     // MARK: - Overrides
@@ -30,10 +32,11 @@ final class ExampleViewController: AloeStackViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupStackViews()
+        stackView.showsVerticalScrollIndicator = false
     }
 }
 
-// MARK: - Useful
+// MARK: - Private
 
 extension ExampleViewController {
 
@@ -44,7 +47,7 @@ extension ExampleViewController {
     }
 }
 
-// MARK: - Layout
+// MARK: - Setup
 
 extension ExampleViewController {
 
@@ -66,12 +69,12 @@ extension ExampleViewController {
     private func setupHeaderView() {
         headerView.translatesAutoresizingMaskIntoConstraints = false
         stackView.addRow(headerView)
-        headerView.heightAnchor.constraint(equalToConstant: LayoutConstants.headerViewHeight).isActive = true
+        headerView.heightAnchor.constraint(equalToConstant: Constants.headerViewHeight).isActive = true
     }
 
     private func setupSixButtonsView() {
-        stackView.addRow(sixButtonsView)
-        sixButtonsView.delegate = self
+        stackView.addRow(impactButtonsView)
+        impactButtonsView.delegate = self
     }
 
     private func setupBigButtonView() {
@@ -88,25 +91,30 @@ extension ExampleViewController {
 
 extension ExampleViewController: PatternViewDelegate {
 
-    func didChangePattrnView() {
+    func didChangePatternView() {
     }
 }
 
-// MARK: - SixButtonsViewDelegate
+// MARK: - ImpactButtonsViewDelegate
 
-extension ExampleViewController: SixButtonsViewDelegate {
+extension ExampleViewController: ImpactButtonsViewDelegate {
 
     func alertButtonTapped(title: String, notification: HapticFeedbackNotification) {
+        var newTitle = title.localized()
+        newTitle.removeLast()
         showAlert(
-            title: "\(title)!",
-            message: String(format: NSLocalizedString("Alert %@",comment: ""), title.lowercased()),
+            title: "\(newTitle)!",
+            message: String(format: NSLocalizedString("alert %@",comment: ""), newTitle.lowercased()),
             hapticFeedbackNotification: notification
         )
     }
 }
 
-// MARK: - LayoutConstants
+// MARK: - Constants
 
-private enum LayoutConstants {
-    static let headerViewHeight: CGFloat = 113
+extension ExampleViewController {
+    
+    enum Constants {
+        static let headerViewHeight: CGFloat = 113
+    }
 }
