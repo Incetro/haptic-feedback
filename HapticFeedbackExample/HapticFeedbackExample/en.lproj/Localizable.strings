@@ -1,0 +1,24 @@
+/* 
+  Localizable.strings
+  HapticFeedbackExample
+
+  Created by Alexander Lezya on 18.12.2020.
+  
+*/
+
+"impact-buttons.title" = "Here you have 6 buttons which can show you how it works in every possible case with them";
+
+"success" = "Success\n✅";
+"error" = "Error\n⛔️";
+"warning" = "Warning\n❗️";
+"success-alert" = "Success\nAlert\n✅";
+"error-alert" = "Error\nAllert\n⛔️";
+"warning-alert" = "Warning\nAlert\n❗️";
+
+"big-button.title" = "Here you have HapticFeedbackButton instance and you can see how it works. You can just tap on it or tap and hold to see all available effects";
+"big-button.button" = "button";
+
+"pattern.head-title" = "Here you can generate your own patterned feedback.\n\n\".\" symbol means light impact\n\"_\" means 0.1 second delay\n\"o\" means medium impact\n\"O\" means heavy impact\n\nSwipe left to remove the last character.";
+"pattern.title" = "Tap on the buttons bellow";
+
+"alert %@" = "This is %@ with haptic feedback";
