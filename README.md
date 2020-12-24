@@ -27,7 +27,7 @@
 *HapticFeedback* is easy to use iOS haptic feedback generator. Besides default haptic feedbacks it can play patterns! Checkout 'ExampleHapticFeedback' project.
 
 
-- [Example](https://github.com/Incetro/haptic-feedback/HapticFeedbackExample) 
+- [Example](https://github.com/Incetro/haptic-feedback/tree/main/HapticFeedbackExample) 
 - [Usage](#Usage)
 	1. [Generating predefined default feedbacks](#predefined-feedbacks)
 	2. [Generating impact feedbacks](#impact-feedbacks)
