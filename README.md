@@ -1,6 +1,6 @@
+![](haptic-feedback.png)
 
-
-# HapticFeedback
+<center> <h1>HapticFeedback</h1> </center>
 
 <div align = "center">
   <a href="https://cocoapods.org/pods/haptic-feedback">
@@ -24,7 +24,7 @@
   <br>
 </div>
 
-*HapticFeedback* is easy to use iOS haptic feedback generator. Besides default haptic feedbacks it can play patterns! Checkout 'ExampleHapticFeedback' project.
+**HapticFeedback** is easy to use iOS haptic feedback generator. Besides default haptic feedbacks it can play patterns! Checkout `ExampleHapticFeedback` project.
 
 
 - [Example](https://github.com/Incetro/haptic-feedback/tree/main/HapticFeedbackExample) 
