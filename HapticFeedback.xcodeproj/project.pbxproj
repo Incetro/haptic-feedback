@@ -3,13 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		20BB9684E083BF7373F4A768 /* Pods_HapticFeedback_IOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 167F623077A72EDF592B6D63 /* Pods_HapticFeedback_IOS.framework */; };
 		CB11240E256BF9AE00215E47 /* HapticFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB30D6C9256ADB0C00EE2C61 /* HapticFeedback.framework */; };
 		CB112527256C0A8700215E47 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1124EF256C09B400215E47 /* MainTests.swift */; };
+		CB22D92D26B868A000F5BCE3 /* DeviceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB22D92C26B868A000F5BCE3 /* DeviceKit.xcframework */; };
+		CB22D92E26B868A000F5BCE3 /* DeviceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB22D92C26B868A000F5BCE3 /* DeviceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB30D71D256ADE2E00EE2C61 /* HapticFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = CB30D71B256ADE2E00EE2C61 /* HapticFeedback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DED9B3E7258620CB005792A9 /* Hapticable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9B3E6258620CB005792A9 /* Hapticable.swift */; };
 		DEF61F442584D09B007E6A9E /* DeviceKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61F412584D09B007E6A9E /* DeviceKit.swift */; };
@@ -36,14 +37,26 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CB22D92F26B868A000F5BCE3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				CB22D92E26B868A000F5BCE3 /* DeviceKit.xcframework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
-		0CBB63B3EDD1389ACBB0895C /* Pods-HapticFeedback IOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HapticFeedback IOS.debug.xcconfig"; path = "Target Support Files/Pods-HapticFeedback IOS/Pods-HapticFeedback IOS.debug.xcconfig"; sourceTree = "<group>"; };
-		167F623077A72EDF592B6D63 /* Pods_HapticFeedback_IOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HapticFeedback_IOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3EADB7FAFF56B6882A8B91DB /* Pods-HapticFeedback IOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HapticFeedback IOS.release.xcconfig"; path = "Target Support Files/Pods-HapticFeedback IOS/Pods-HapticFeedback IOS.release.xcconfig"; sourceTree = "<group>"; };
 		CB112409256BF9AE00215E47 /* HapticFeedbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HapticFeedbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB112444256BFA9E00215E47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB112490256C024A00215E47 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		CB1124EF256C09B400215E47 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
+		CB22D92C26B868A000F5BCE3 /* DeviceKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DeviceKit.xcframework; path = Carthage/Build/DeviceKit.xcframework; sourceTree = "<group>"; };
 		CB30D6C9256ADB0C00EE2C61 /* HapticFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HapticFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB30D71B256ADE2E00EE2C61 /* HapticFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HapticFeedback.h; sourceTree = "<group>"; };
 		CB30D71C256ADE2E00EE2C61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -75,22 +88,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				20BB9684E083BF7373F4A768 /* Pods_HapticFeedback_IOS.framework in Frameworks */,
+				CB22D92D26B868A000F5BCE3 /* DeviceKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4779D36AD25D94A170F7E78F /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				0CBB63B3EDD1389ACBB0895C /* Pods-HapticFeedback IOS.debug.xcconfig */,
-				3EADB7FAFF56B6882A8B91DB /* Pods-HapticFeedback IOS.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		CB1123F6256BF82700215E47 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,14 +113,21 @@
 			path = HapticFeedbackTests;
 			sourceTree = "<group>";
 		};
+		CB22D92326B8631600F5BCE3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB22D92C26B868A000F5BCE3 /* DeviceKit.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB30D6BD256ADAB400EE2C61 = {
 			isa = PBXGroup;
 			children = (
 				CB1123F6256BF82700215E47 /* Tests */,
 				CB30D718256ADE2E00EE2C61 /* Sources */,
 				CB30D6CA256ADB0C00EE2C61 /* Products */,
-				4779D36AD25D94A170F7E78F /* Pods */,
-				FE58CA8FBFAAD1480D42DA34 /* Frameworks */,
+				CB22D92326B8631600F5BCE3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -191,14 +202,6 @@
 			path = HapticFeedback;
 			sourceTree = "<group>";
 		};
-		FE58CA8FBFAAD1480D42DA34 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				167F623077A72EDF592B6D63 /* Pods_HapticFeedback_IOS.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -235,11 +238,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = CB30D6DB256ADB0D00EE2C61 /* Build configuration list for PBXNativeTarget "HapticFeedback IOS" */;
 			buildPhases = (
-				C0CD8EABA9C7EC58B361EAA9 /* [CP] Check Pods Manifest.lock */,
 				CB30D6C4256ADB0C00EE2C61 /* Headers */,
 				CB30D6C5256ADB0C00EE2C61 /* Sources */,
 				CB30D6C6256ADB0C00EE2C61 /* Frameworks */,
 				CB30D6C7256ADB0C00EE2C61 /* Resources */,
+				CB22D92F26B868A000F5BCE3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -304,31 +307,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		C0CD8EABA9C7EC58B361EAA9 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-HapticFeedback IOS-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		CB112405256BF9AE00215E47 /* Sources */ = {
@@ -584,7 +562,6 @@
 		};
 		CB30D6DC256ADB0D00EE2C61 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0CBB63B3EDD1389ACBB0895C /* Pods-HapticFeedback IOS.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -627,6 +604,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -667,7 +648,6 @@
 		};
 		CB30D6DD256ADB0D00EE2C61 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EADB7FAFF56B6882A8B91DB /* Pods-HapticFeedback IOS.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -710,6 +690,10 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
