@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		CB11240E256BF9AE00215E47 /* HapticFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB30D6C9256ADB0C00EE2C61 /* HapticFeedback.framework */; };
 		CB112527256C0A8700215E47 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1124EF256C09B400215E47 /* MainTests.swift */; };
-		CB22D92D26B868A000F5BCE3 /* DeviceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB22D92C26B868A000F5BCE3 /* DeviceKit.xcframework */; };
-		CB22D92E26B868A000F5BCE3 /* DeviceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB22D92C26B868A000F5BCE3 /* DeviceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		CB22D93126B8792400F5BCE3 /* DeviceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB22D93026B8792400F5BCE3 /* DeviceKit.xcframework */; };
+		CB22D93226B8792400F5BCE3 /* DeviceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB22D93026B8792400F5BCE3 /* DeviceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB30D71D256ADE2E00EE2C61 /* HapticFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = CB30D71B256ADE2E00EE2C61 /* HapticFeedback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DED9B3E7258620CB005792A9 /* Hapticable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9B3E6258620CB005792A9 /* Hapticable.swift */; };
 		DEF61F442584D09B007E6A9E /* DeviceKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61F412584D09B007E6A9E /* DeviceKit.swift */; };
@@ -44,7 +44,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				CB22D92E26B868A000F5BCE3 /* DeviceKit.xcframework in Embed Frameworks */,
+				CB22D93226B8792400F5BCE3 /* DeviceKit.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -56,7 +56,7 @@
 		CB112444256BFA9E00215E47 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB112490256C024A00215E47 /* LinuxMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
 		CB1124EF256C09B400215E47 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
-		CB22D92C26B868A000F5BCE3 /* DeviceKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DeviceKit.xcframework; path = Carthage/Build/DeviceKit.xcframework; sourceTree = "<group>"; };
+		CB22D93026B8792400F5BCE3 /* DeviceKit.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = DeviceKit.xcframework; path = Carthage/Build/DeviceKit.xcframework; sourceTree = "<group>"; };
 		CB30D6C9256ADB0C00EE2C61 /* HapticFeedback.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = HapticFeedback.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB30D71B256ADE2E00EE2C61 /* HapticFeedback.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HapticFeedback.h; sourceTree = "<group>"; };
 		CB30D71C256ADE2E00EE2C61 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB22D92D26B868A000F5BCE3 /* DeviceKit.xcframework in Frameworks */,
+				CB22D93126B8792400F5BCE3 /* DeviceKit.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,7 +116,7 @@
 		CB22D92326B8631600F5BCE3 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				CB22D92C26B868A000F5BCE3 /* DeviceKit.xcframework */,
+				CB22D93026B8792400F5BCE3 /* DeviceKit.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
