@@ -1,1 +1,1 @@
-github "Incetro/DeviceKit" "carthage"
+github "devicekit/DeviceKit" ~> 4.0
