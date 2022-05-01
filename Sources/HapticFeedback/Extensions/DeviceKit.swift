@@ -13,7 +13,7 @@ extension Device {
 
     /// Return the `DeviceType` of the device in use
     var deviceType: Device {
-        return Device.current
+        Device.current
     }
 
     /// Return true if has taptic engine
