@@ -10,7 +10,6 @@
 		CB11240E256BF9AE00215E47 /* HapticFeedback.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB30D6C9256ADB0C00EE2C61 /* HapticFeedback.framework */; };
 		CB112527256C0A8700215E47 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB1124EF256C09B400215E47 /* MainTests.swift */; };
 		CB22D93126B8792400F5BCE3 /* DeviceKit.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB22D93026B8792400F5BCE3 /* DeviceKit.xcframework */; };
-		CB22D93226B8792400F5BCE3 /* DeviceKit.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CB22D93026B8792400F5BCE3 /* DeviceKit.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		CB30D71D256ADE2E00EE2C61 /* HapticFeedback.h in Headers */ = {isa = PBXBuildFile; fileRef = CB30D71B256ADE2E00EE2C61 /* HapticFeedback.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DED9B3E7258620CB005792A9 /* Hapticable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED9B3E6258620CB005792A9 /* Hapticable.swift */; };
 		DEF61F442584D09B007E6A9E /* DeviceKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF61F412584D09B007E6A9E /* DeviceKit.swift */; };
@@ -36,20 +35,6 @@
 			remoteInfo = "HapticFeedback IOS";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		CB22D92F26B868A000F5BCE3 /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				CB22D93226B8792400F5BCE3 /* DeviceKit.xcframework in Embed Frameworks */,
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		CB112409256BF9AE00215E47 /* HapticFeedbackTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HapticFeedbackTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -242,7 +227,6 @@
 				CB30D6C5256ADB0C00EE2C61 /* Sources */,
 				CB30D6C6256ADB0C00EE2C61 /* Frameworks */,
 				CB30D6C7256ADB0C00EE2C61 /* Resources */,
-				CB22D92F26B868A000F5BCE3 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
