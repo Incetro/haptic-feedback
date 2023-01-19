@@ -26,7 +26,9 @@ final class HapticFeedbackNotificationEngine {
     private lazy var impactGenerator: [HapticFeedbackImpactStyle: UIImpactFeedbackGenerator] = [
         .light: .init(style: .light),
         .medium: .init(style: .medium),
-        .heavy: .init(style: .heavy)
+        .heavy: .init(style: .heavy),
+        .rigid: .init(style: .rigid),
+        .soft: .init(style: .soft)
     ]
 
     // MARK: - Initializers

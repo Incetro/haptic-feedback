@@ -13,4 +13,6 @@ public enum HapticFeedbackImpactStyle {
     case light
     case medium
     case heavy
+    case soft
+    case rigid
 }
