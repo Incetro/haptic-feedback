@@ -17,6 +17,8 @@ final class PatternEngine {
         case space = "-"
         case signalHeavy = "O"
         case signalMedium = "o"
+        case signalRigid = "X"
+        case signalSoft = "x"
         case signalLight = "."
     }
 
@@ -70,6 +72,10 @@ final class PatternEngine {
                 queue.addOperation(SignalOperation(hapticEngine: engine, impact: .heavy, pauseDuration: pauseDuration))
             } else if character == PatternChar.signalMedium.rawValue {
                 queue.addOperation(SignalOperation(hapticEngine: engine, impact: .medium, pauseDuration: pauseDuration))
+            } else if character == PatternChar.signalRigid.rawValue {
+                queue.addOperation(SignalOperation(hapticEngine: engine, impact: .rigid, pauseDuration: pauseDuration))
+            } else if character == PatternChar.signalSoft.rawValue {
+                queue.addOperation(SignalOperation(hapticEngine: engine, impact: .soft, pauseDuration: pauseDuration))
             } else if character == PatternChar.signalLight.rawValue {
                 queue.addOperation(SignalOperation(hapticEngine: engine, impact: .light, pauseDuration: pauseDuration))
             }
